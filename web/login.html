@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录页面</title>
+    <script src="./jquery.js"></script>
+    <style>
+        body {
+            background-color: #28292d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        .da {
+            position: relative;
+            /* margin: 50px auto; */
+            margin: 100px auto;
+            width: 300px;
+            height: 400px;
+            background-color: #7f728e;
+            box-shadow: 5px 5px 25px #7f728e;
+            overflow: hidden;
+        }
+
+        .da::before {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 300px;
+            height: 400px;
+            background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
+            transform-origin: bottom right;
+            animation: animate 6s linear infinite;
+            animation-delay: -3s;
+        }
+
+        .da::after {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 300px;
+            height: 400px;
+            background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
+            transform-origin: bottom right;
+            animation: animate 6s linear infinite;
+        }
+
+        @keyframes animate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .shang {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            width: 290px;
+            height: 390px;
+            background-color: #7f728e;
+            z-index: 1;
+        }
+
+        h1 {
+            margin-top: 20px;
+            text-align: center;
+            cursor: default;
+        }
+
+        input {
+            margin-left: 48px;
+            /* margin-top: 41px; */
+            margin-top: 44px;
+            height: 33px;
+            width: 175px;
+            border-radius: 5px;
+            border-color: transparent;
+            border-bottom-color: #45f3ff;
+            outline: none;
+            background-color: #7f728e;
+            padding-left: 7px;
+            font-size: large;
+            color: #293435;
+            transition: all 0.5s;
+            cursor: pointer;
+        }
+
+        button {
+            font-size: large;
+            margin-left: 97px;
+            margin-top: 80px;
+            width: 91px;
+            height: 33px;
+            border-color: #45f3ff;
+            border-radius: 2px;
+            background-color: rgb(143, 143, 183);
+            cursor: pointer;
+        }
+
+        form {
+            position: relative;
+        }
+
+        span {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: #293435;
+            cursor: pointer;
+        }
+
+        a {
+            position: absolute;
+            top: 197px;
+            right: 10px;
+            color: #cbc0d7;
+        }
+
+        a:hover {
+            color: turquoise;
+        }
+
+        .one {
+            top:
+                /* 48px */
+                51px;
+            left: 57px;
+            transition: all 0.5s;
+        }
+
+        .two {
+            top:
+                /* 127px */
+                132px;
+            left: 57px;
+            transition: all 0.5s;
+        }
+
+        .a {
+            position: absolute;
+            top: 85px
+                /* 80px */
+            ;
+            right: 31px;
+            width: 143px;
+            text-align: center;
+            height: 23px;
+            transform: scale(0.8);
+            color: #7e0b0b;
+            /* background-color: pink;*/
+        }
+
+        .b {
+            position: absolute;
+            top:
+                /* 162px */
+                166px;
+            right: -30px;
+            width: 265px;
+            height: 23px;
+            text-align: center;
+            transform: scale(0.8);
+            color: #7e0b0b;
+            /* background-color: pink;*/
+        }
+
+        .c {
+            position: absolute;
+            top: -57px;
+            /* right: -20px; */
+            right: 43px;
+            text-align: center;
+            width: 190px;
+            height: 23px;
+            transform: scale(1.2);
+            color: #7e0b0b;
+            /* background-color: pink; */
+            transition: all 1s;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="da">
+        <div class="shang">
+            <h1>sign in</h1>
+            <form id="form1">
+                <input type="text" id="username" autocomplete="off" name="username" required="required"><span
+                    class="one">用户名</span><br>
+                <div class="a"></div>
+                <input type="password" id="password" required="required" name="password"><span class="two">密码</span><br>
+                <a href="http://127.0.0.1/reguser.html">还没有账号-注册一个</a>
+                <button>登陆</button>
+                <div class="b"></div>
+                <div class="c"></div>
+            </form>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+
+</html>
